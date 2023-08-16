@@ -106,6 +106,7 @@
   display: flex;
   width: 50%;
   justify-content: space-around;
+  align-items: flex-end;
   color: rgb(14, 110, 245);
 }
 .icons-and-button {
