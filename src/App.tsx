@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { useAuthState } from "react-firebase-hooks/auth";
+//useAuthStateは、現在のログイン情報を取得するためのコンポーネント
+import { auth, provider } from './firebase';
+import Home from './components/Home';
+import Button from '@mui/material/Button';
+import { signInWithPopup } from 'firebase/auth';
 
 function App() {
+  const [user] = useAuthState(auth);
+
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider)
+}
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {user ? (
+        <>
+          <Home />
+        </>
+      ) : (
+        <>
+          <Button variant="contained" onClick={signInWithGoogle}>Sign In With Google</Button>
+        </>
+      )}
+
     </div>
   );
 }
