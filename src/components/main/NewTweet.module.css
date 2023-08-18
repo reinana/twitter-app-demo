@@ -1,0 +1,13 @@
+.tweet_hiddenIcon {
+    text-align: center;
+    display: none;
+}
+.tweet_sendBtn {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tweet_sendDisabledBtn {
+    color: gray;
+    background-color: rgb(194, 194, 194);
+}

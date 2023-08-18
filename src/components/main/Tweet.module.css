@@ -1,0 +1,30 @@
+.tweet {
+    padding: 2rem;
+    border-bottom: 0.5px solid rgb(232, 232, 232);
+    
+}
+.container {
+    display: flex;
+
+}
+.name_and_date{
+    flex: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+.tweet_username{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.tweet_image {
+    width: 80%;
+}
+.smallIcons {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0.5rem;
+}
