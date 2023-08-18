@@ -2,6 +2,7 @@
   "name": "twitter-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://reinana.github.io/twitter-app-demo",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -16,6 +17,7 @@
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "firebase": "^10.1.0",
+    "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",
@@ -28,7 +30,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env PUBLIC_URL=/tweter-app-demo react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -51,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "@types/uuid": "^9.0.2"
+    "@types/uuid": "^9.0.2",
+    "cross-env": "^7.0.3"
   }
 }
